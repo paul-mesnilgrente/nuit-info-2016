@@ -17,7 +17,9 @@
         <li class="active"><a href="{{ path('homepage') }}">Accueil <span class="sr-only">(current)</span></a></li>
         <li><a href="{{ path('equipe') }}">Notre équipe</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Notre projet <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Notre projet <span class="caret"></span>
+          </a>
           <ul class="dropdown-menu">
             <li><a href="{{ path('presentation') }}">Présentation</a></li>
             <li><a href="{{ path('utilisateur') }}">Documentation utilisateur</a></li>
@@ -29,6 +31,26 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{ path('contact') }}">Contact</a></li>
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        <li>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <span class="glyphicon glyphicon-user"></span> <span class="caret">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ path('fos_user_profile_show') }}">Consulter profil</a></li>
+            <li><a href="{{ path('fos_user_profile_edit') }}">Editer profil</a></li>
+            <li><a href="{{ path('fos_user_change_password') }}">Modifier mon mot de passe</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
+          </ul>
+        </li>
+        {% else %}
+        <li>
+          <a href="{{ path('fos_user_security_login') }}">
+            {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
+          </a>
+        </li>
+        {% endif %}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
