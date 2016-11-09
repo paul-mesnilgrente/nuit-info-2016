@@ -17,6 +17,6 @@ class ProjetController extends Controller
     public function projetAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('projet/index.html.twig');
+        return $this->render('projet/projet.html.twig');
     }
 }
