@@ -2,6 +2,10 @@ body {
     padding-top: 70px;
 }
 
+#register {
+    color: black;
+}
+
 #tri-equipe {
     margin-top: 20px;
     margin-bottom: 20px;
