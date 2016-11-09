@@ -11,41 +11,42 @@
       <a class="navbar-brand" href="{{ path('homepage') }}">Nuit de l'info 2016</a>
     </div>
 
+    {% set r = app.request.get('_route') %}
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{{ path('homepage') }}">Accueil <span class="sr-only">(current)</span></a></li>
-        <li><a href="{{ path('equipe') }}">Notre équipe</a></li>
-        <li class="dropdown">
+        <li{% if r == 'homepage' %} class="active"{% endif %}><a href="{{ path('homepage') }}">Accueil</a></li>
+        <li{% if r == 'equipe' %} class="active"{% endif %}><a href="{{ path('equipe') }}">Notre équipe</a></li>
+        <li{% if r == 'presentation' or r == 'utilisateur' or r == 'conception' or r == 'projet' %} class="active"{% endif %} class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Notre projet <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="{{ path('presentation') }}">Présentation</a></li>
-            <li><a href="{{ path('utilisateur') }}">Documentation utilisateur</a></li>
-            <li><a href="{{ path('conception') }}">Conception</a></li>
+            <li{% if r == 'presentation' %} class="active"{% endif %}><a href="{{ path('presentation') }}">Présentation</a></li>
+            <li{% if r == 'utilisateur' %} class="active"{% endif %}><a href="{{ path('utilisateur') }}">Documentation utilisateur</a></li>
+            <li{% if r == 'conception' %} class="active"{% endif %}><a href="{{ path('conception') }}">Conception</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{ path('projet') }}">Démonstration</a></li>
+            <li{% if r == 'projet' %} class="active"{% endif %}><a href="{{ path('projet') }}">Démonstration</a></li>
           </ul>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="{{ path('contact') }}">Contact</a></li>
+        <li{% if r == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        <li>
+        <li{% if r == 'fos_user_profile_show' or r == 'fos_user_profile_edit' or r == 'fos_user_change_password' or r == 'fos_user_security_logout' %} class="active"{% endif %}>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="glyphicon glyphicon-user"></span> <span class="caret">
           </a>
           <ul class="dropdown-menu">
-            <li><a href="{{ path('fos_user_profile_show') }}">Consulter profil</a></li>
-            <li><a href="{{ path('fos_user_profile_edit') }}">Editer profil</a></li>
-            <li><a href="{{ path('fos_user_change_password') }}">Modifier mon mot de passe</a></li>
+            <li{% if r == 'fos_user_profile_show' %} class="active"{% endif %}><a href="{{ path('fos_user_profile_show') }}">Consulter profil</a></li>
+            <li{% if r == 'fos_user_profile_edit' %} class="active"{% endif %}><a href="{{ path('fos_user_profile_edit') }}">Editer profil</a></li>
+            <li{% if r == 'fos_user_change_password' %} class="active"{% endif %}><a href="{{ path('fos_user_change_password') }}">Modifier mon mot de passe</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
+            <li{% if r == 'fos_user_security_logout' %} class="active"{% endif %}><a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
           </ul>
         </li>
         {% else %}
-        <li>
+        <li{% if r == 'fos_user_security_login' %} class="active"{% endif %}>
           <a href="{{ path('fos_user_security_login') }}">
             {{ 'layout.login'|trans({}, 'FOSUserBundle') }}
           </a>
