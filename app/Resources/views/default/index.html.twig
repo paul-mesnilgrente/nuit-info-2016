@@ -2,4 +2,13 @@
 
 {% block body %}
 <h1>Accueil</h1>
+
+{% if posts is empty %}
+<p>Aucun article</p>
+{% else %}
+  {% for post in posts %}
+    <h2>{{ post.titre }}</h2>
+    <p>{{ post.contenu }}</p>
+  {% endfor %}
+{% endif %}
 {% endblock %}

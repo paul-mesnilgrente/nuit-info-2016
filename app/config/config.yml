@@ -75,3 +75,8 @@ fos_user:
     registration:
         confirmation:
             enabled: true
+
+stof_doctrine_extensions:
+    orm:
+        default:
+            sluggable: true
