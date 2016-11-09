@@ -1,3 +1,78 @@
 body {
     padding-top: 70px;
 }
+
+#tri-equipe {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#tri-equipe ul li {
+    margin: 0px 20px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid gray;
+    border-radius: 25px;
+}
+
+#tri-equipe ul li:hover {
+    background-color: gray;
+}
+
+#tri-equipe a {
+    margin: 0px;
+    padding: 0px;
+}
+
+.carte-equipe {
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.carte-equipe h2 {
+    margin-top: 5px;
+    padding-left: ;
+    font-size: 1.5em;
+}
+
+.carte-equipe img {
+    border-radius: 7px 7px 0px 0px;
+}
+
+.carte-equipe .footer {
+    background-color: #C1C1C1;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.carte-equipe .footer ul {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    padding-right: 10px;
+}
+
+.carte-equipe .footer ul li {
+    background-color: #846BFF;
+    border-radius: 5px;
+}
+
+.carte-equipe .footer ul li:hover {
+    background-color: #FF0000;
+}
+
+.carte-equipe .fa {
+    color: black;
+}
+
+.carte-equipe .fa:hover {
+    color: white;
+}
+
+.carte-equipe dt, .carte-equipe dd {
+    margin-right: 0px;
+    margin-left: 5px;
+    padding-left: 0px;
+    width: inherit;
+    text-align: left;
+}

@@ -1,5 +1,52 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<h1>Équipe</h1>
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <h1 class="text-center">Équipe</h1>
+      <p>
+        Notre équipe représente l'UPSSITECH dans cette nuit de 
+        l'info édition 2016.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <h1 class="text-center">Composition de l'équipe</h1>
+    <div id="tri-equipe" class="text-center">
+      <ul class="list-unstyled list-inline">
+        <li><a href="">1ère année SRI</a></li>
+        <li><a href="">2ème année SRI</a></li>
+        <li><a href="">3ème année SRI</a></li>
+        <li><a href="">Défi 1</a></li>
+        <li><a href="">Défi 2</a></li>
+        <li><a href="">Défi 3</a></li>
+      </ul>
+    </div>
+
+    {% set personnes = [
+    {'nom': 'Aurélien Bernier-Levalois', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Benjamin Chamand', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Clément Morel', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Clément Olalainty', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Delphine Raoux', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Gabriel Del-Rey', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Kévin Rolland', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Kévin Cortacero', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Maxime Sanmartin', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Maxime Rivalin', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Maxime Pibarot', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Morgan Chabaud', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Paul Mesnilgrente', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Raphaël Lefèvre', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Roger Nengwe', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Sarah Brisson', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Thibaut Morant', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'},
+    {'nom': 'Yoann Fleytoux', 'role': 'Développeur', 'annee': '3ème', 'competences': 'HTML5/CSS3, Javascript', 'defi': 'Défi 1'}
+    ]
+    %}
+    {% for personne in personnes %}
+      {% include 'default/carte.html.twig' with personne %}
+    {% endfor %}
+
+  </div>    
 {% endblock %}
