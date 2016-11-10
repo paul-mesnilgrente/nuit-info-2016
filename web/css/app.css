@@ -78,7 +78,7 @@ body {
 }
 
 .carte-equipe dt, .carte-equipe dd {
-    margin-right: 0px;
+    margin-right: 5px;
     margin-left: 5px;
     padding-left: 0px;
     width: inherit;
