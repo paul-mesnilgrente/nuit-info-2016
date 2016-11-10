@@ -8,6 +8,7 @@
 {% else %}
   {% for post in posts %}
     <h2>{{ post.titre }}</h2>
+    <small>Rédigé par {{ post.auteur.username }} le {{ post.datePublication|date('dd/mm/YYYY') }}</small>
     <p>{{ post.contenu }}</p>
   {% endfor %}
 {% endif %}

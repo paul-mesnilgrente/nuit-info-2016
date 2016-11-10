@@ -16,8 +16,10 @@ class DefaultController extends Controller
     public function indexAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $posts = $em->getRepository('AppBundle:Post')->findAll();
-        // replace this example code with whatever you need
+        $posts = $em->getRepository('AppBundle:Post')->findBy(
+            array('estPublier' => true),
+            array('datePublication' => 'desc'));
+
         return $this->render('default/index.html.twig',
             array('posts' => $posts));
     }

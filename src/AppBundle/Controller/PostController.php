@@ -12,7 +12,7 @@ use AppBundle\Form\PostType;
 /**
  * @Route("/post")
  */
-class PostController extends AdminController
+class PostController extends Controller
 {
     /**
      * @Route("/ajouter", name="ajouter_post")
@@ -20,6 +20,7 @@ class PostController extends AdminController
     public function ajouterAction(Request $request)
     {
         $post = new Post();
+        $post->setAuteur($this->getUser());
         $form = $this->createForm(PostType::class, $post);
 
         $form->handleRequest($request);

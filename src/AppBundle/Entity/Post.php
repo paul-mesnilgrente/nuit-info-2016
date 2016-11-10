@@ -47,6 +47,7 @@ class Post
      * @var User
      *
      * @ORM\ManyToOne(targetEntity="User", cascade={"persist"})
+     * @ORM\JoinColumn(nullable=false)
      */
     private $auteur;
 

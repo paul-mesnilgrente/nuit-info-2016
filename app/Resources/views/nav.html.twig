@@ -33,7 +33,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li{% if r == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        <li{% if r == 'fos_user_profile_show' or r == 'fos_user_profile_edit' or r == 'fos_user_change_password' or r == 'fos_user_security_logout' %} class="active"{% endif %}>
+        <li{% if r == 'fos_user_profile_show' or r == 'fos_user_profile_edit' or r == 'fos_user_change_password' or r == 'fos_user_security_logout' or r == 'post_ajouter' %} class="active"{% endif %}>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="glyphicon glyphicon-user"></span> <span class="caret">
           </a>
@@ -42,6 +42,10 @@
             <li{% if r == 'fos_user_profile_edit' %} class="active"{% endif %}><a href="{{ path('fos_user_profile_edit') }}">Editer profil</a></li>
             <li{% if r == 'fos_user_change_password' %} class="active"{% endif %}><a href="{{ path('fos_user_change_password') }}">Modifier mon mot de passe</a></li>
             <li role="separator" class="divider"></li>
+            {% if is_granted('ROLE_AUTEUR') %}
+              <li{% if r == 'fos_user_change_password' %} class="active"{% endif %}><a href="{{ path('ajouter_post') }}">Ajouter un post</a></li>
+              <li role="separator" class="divider"></li>
+            {% endif %}
             <li{% if r == 'fos_user_security_logout' %} class="active"{% endif %}><a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
           </ul>
         </li>
