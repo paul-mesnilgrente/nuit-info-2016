@@ -8,8 +8,12 @@
 {% else %}
   {% for post in posts %}
     <h2>{{ post.titre }}</h2>
-    <small>Rédigé par {{ post.auteur.username }} le {{ post.datePublication|date('dd/mm/YYYY') }}</small>
-    <p>{{ post.contenu }}</p>
+    <p>
+      <small>Rédigé par {{ post.auteur.username }}
+        le {{ post.datePublication|date('d/m/Y à H') }}h
+      </small>
+    </p>
+    <p>{{ post.contenu|raw }}</p>
   {% endfor %}
 {% endif %}
 {% endblock %}

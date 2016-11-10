@@ -17,8 +17,13 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $posts = $em->getRepository('AppBundle:Post')->findBy(
-            array('estPublier' => true),
+            array('estPublie' => true),
             array('datePublication' => 'desc'));
+        $parser = $this->container->get('markdown.parser');
+        foreach ($posts as $post) {
+            $html = $parser->transformMarkdown($post->getContenu());
+            $post->setContenu($html);
+        }
 
         return $this->render('default/index.html.twig',
             array('posts' => $posts));

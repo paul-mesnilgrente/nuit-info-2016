@@ -32,6 +32,7 @@ class Post
     /**
      * @var \DateTime
      *
+     * @Gedmo\Timestampable(on="change", field={"estPublie"})
      * @ORM\Column(name="datePublication", type="datetime", nullable=true, unique=true)
      */
     private $datePublication;
@@ -39,9 +40,9 @@ class Post
     /**
      * @var boolean
      *
-     * @ORM\Column(name="estPublier", type="boolean")
+     * @ORM\Column(name="estPublie", type="boolean")
      */
-    private $estPublier;
+    private $estPublie;
 
     /**
      * @var User
@@ -73,7 +74,7 @@ class Post
 
     public function __construct() {
         $this->dateCreation = new \Datetime();
-        $this->estPublier = false;
+        $this->estPublie = false;
     }
 
     /**
@@ -232,26 +233,26 @@ class Post
     }
 
     /**
-     * Set estPublier
+     * Set estPublie
      *
-     * @param boolean $estPublier
+     * @param boolean $estPublie
      *
      * @return Post
      */
-    public function setEstPublier($estPublier)
+    public function setEstPublie($estPublie)
     {
-        $this->estPublier = $estPublier;
+        $this->estPublie = $estPublie;
 
         return $this;
     }
 
     /**
-     * Get estPublier
+     * Get estPublie
      *
      * @return boolean
      */
-    public function getEstPublier()
+    public function getEstPublie()
     {
-        return $this->estPublier;
+        return $this->estPublie;
     }
 }
