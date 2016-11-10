@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7457ed0a7d1ade95735cae854e163d6a",
-    "content-hash": "a49b8573868374af41bdefb48c167aeb",
+    "hash": "9e038a34ac012035c6d5368fe6e9be33",
+    "content-hash": "ac3e8db7fec3efca0a00ce3cfc9763b2",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -821,12 +821,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSUserBundle.git",
-                "reference": "3015f0965b74704362f9b2006646781d4613bcdd"
+                "reference": "dc8e624a6776d69850213df4de59f7c4afc72d00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/3015f0965b74704362f9b2006646781d4613bcdd",
-                "reference": "3015f0965b74704362f9b2006646781d4613bcdd",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/dc8e624a6776d69850213df4de59f7c4afc72d00",
+                "reference": "dc8e624a6776d69850213df4de59f7c4afc72d00",
                 "shasum": ""
             },
             "require": {
@@ -890,7 +890,7 @@
             "keywords": [
                 "User management"
             ],
-            "time": "2016-11-08 13:35:42"
+            "time": "2016-11-10 13:28:14"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -1262,59 +1262,6 @@
                 "psr-3"
             ],
             "time": "2016-07-29 03:23:52"
-        },
-        {
-            "name": "ornj/markdown-bundle",
-            "version": "dev-master",
-            "target-dir": "Ornj/Bundle/MarkdownBundle",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ornj/markdown-bundle.git",
-                "reference": "2caab7a984d8e47e1b27fcd2f470277b42c6cd1d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ornj/markdown-bundle/zipball/2caab7a984d8e47e1b27fcd2f470277b42c6cd1d",
-                "reference": "2caab7a984d8e47e1b27fcd2f470277b42c6cd1d",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "symfony/symfony": ">=2.2"
-            },
-            "suggest": {
-                "knplabs/knp-markdown-bundle": "1.2.*@dev"
-            },
-            "type": "symfony-bundle",
-            "autoload": {
-                "psr-0": {
-                    "Ornj\\Bundle\\MarkdownBundle": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Stephen Hurwitz",
-                    "email": "steve@stevehurwitz.com",
-                    "homepage": "http://stevehurwitz.com"
-                },
-                {
-                    "name": "James Rickard",
-                    "email": "james@frodosghost.com",
-                    "homepage": "http://www.frodosghost.com"
-                }
-            ],
-            "description": "Form fields for inputting and previewing markdown in Symfony2",
-            "keywords": [
-                "bootstrap",
-                "bootstrap form",
-                "form",
-                "markdown"
-            ],
-            "time": "2016-03-21 17:46:55"
         },
         {
             "name": "paragonie/random_compat",
@@ -2500,8 +2447,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "friendsofsymfony/user-bundle": 20,
-        "ornj/markdown-bundle": 20
+        "friendsofsymfony/user-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

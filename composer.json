@@ -30,8 +30,7 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "friendsofsymfony/user-bundle": "dev-master",
         "stof/doctrine-extensions-bundle": "^1.2",
-        "knplabs/knp-markdown-bundle": "^1.5",
-        "ornj/markdown-bundle": "dev-master"
+        "knplabs/knp-markdown-bundle": "^1.5"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
