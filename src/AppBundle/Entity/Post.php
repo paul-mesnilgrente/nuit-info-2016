@@ -32,7 +32,8 @@ class Post
     /**
      * @var \DateTime
      *
-     * @Gedmo\Timestampable(on="change", field={"estPublie"})
+     * @Gedmo\Timestampable(on="create")
+     * @Gedmo\Timestampable(on="change", field="estPublie", value=true)
      * @ORM\Column(name="datePublication", type="datetime", nullable=true, unique=true)
      */
     private $datePublication;

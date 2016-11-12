@@ -42,14 +42,52 @@ class PostController extends Controller
      */
     public function modifierAction(Request $request, Post $post)
     {
-        return $this->render('post/modifier.html.twig');
+        $form = $this->createForm(PostType::class, $post);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $post = $form->getData();
+
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($post);
+            $em->flush();
+
+            return $this->redirectToRoute('homepage');
+        }
+        return $this->render('post/modifier.html.twig',
+            array('form' => $form->createView()));
     }
 
     /**
-     * @Route("/supprimer/{slug}", name="ajouter_post", name="supprimer_post")
+     * @Route("/consulter/non-publies", name="consulter_non_publies_post")
      */
-    public function supprimerAction(Request $request)
+    public function consulterNonPublies(Request $request) {
+        $em = $this->getDoctrine()->getManager();
+        $posts = $em->getRepository('AppBundle:Post')->findBy(
+            array('estPublie' => false),
+            array('datePublication' => 'desc'));
+        return $this->render('post/consulter-non-publies.html.twig', array(
+            'posts' => $posts));
+    }
+
+    /**
+     * @Route("/supprimer/{slug}", name="supprimer_post")
+     */
+    public function supprimerAction(Request $request, Post $post)
     {
-        return $this->render('post/supprimer.html.twig');
+        $form = $this->createFormBuilder()->getForm();
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid())
+        {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($post);
+            $em->flush();
+            $request->getSession()->getFlashBag()->add('info', "Le poste a bien été supprimé.");
+            return $this->redirect($this->generateUrl('homepage'));
+        }
+        return $this->render('post/supprimer.html.twig', array(
+            'post' => $post,
+            'form' => $form->createView()));
     }
 }

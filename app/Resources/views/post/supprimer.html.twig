@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Supprimer un post</h1> <hr>
+
+<div class="alert alert-danger" role="alert">
+  <p>
+    Êtes-vous bien sûr de vouloir supprimer ce post "{{ post.titre }}".<br>
+    Ce post sera supprimer de la base de donnée.
+  </p>
+</div>
+
+{{ form_start(form) }}
+<input type="submit" class="btn btn-danger" value="Supprimer">
+{{ form_rest(form) }}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Les articles non publiés</h1><hr>
+
+{% if posts is empty %}
+  <p>Aucun article non publié</p>
+{% else %}
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Date de création</th>
+        <th>Date de publication</th>
+        <th>Titre</th>
+        <th>Contenu</th>
+        <th>Modifier</th>
+        <th>Supprimer</th>
+      </tr>
+    </thead>
+    {% for post in posts %}
+      <tr>
+        <td>{{ post.dateCreation is empty ? "" : 
+          post.dateCreation|date('d/m/Y H:i') }}</td>
+        <td>{{ post.datePublication is empty ? "" : 
+          post.datePublication|date('d/m/Y H:i') }}</td>
+        <td>{{ post.titre }}</td>
+        <td>{{ post.contenu }}</td>
+        <td><a href="{{ path('modifier_post', {'slug': post.slug}) }}">Modifier</a></td>
+        <td><a href="{{ path('supprimer_post', {'slug': post.slug}) }}">Supprimer</a></td>
+      </tr>
+    {% endfor %}
+    <tr>
+    </tr>
+  </table>
+{% endif %}
+{% endblock %}
