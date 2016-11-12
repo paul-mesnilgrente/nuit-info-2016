@@ -1,0 +1,14 @@
+<article>
+  <h2>{{ post.titre }}</h2>
+  <p>
+    <small>{{ post.auteur.username }} | 
+      {{ post.datePublication is empty ?
+      "" : post.datePublication|date('d/m/Y à H:i') }}h
+    </small>
+  </p>
+  {{ post.contenu|raw }}
+</article>
+{% if is_granted('ROLE_AUTEUR') %}
+  <a class="btn btn-primary" href="{{ path('modifier_post', {'slug': post.slug}) }}">Modifier</a>
+  <a class="btn btn-danger" href="{{ path('supprimer_post', {'slug': post.slug}) }}">Supprimer</a>
+{% endif %}

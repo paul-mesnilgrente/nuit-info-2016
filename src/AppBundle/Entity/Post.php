@@ -5,13 +5,15 @@ namespace AppBundle\Entity;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 
+use Eko\FeedBundle\Item\Writer\RoutedItemInterface;
+
 /**
  * Post
  *
  * @ORM\Table(name="ndli_post")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\PostRepository")
  */
-class Post
+class Post implements RoutedItemInterface
 {
     /**
      * @var int
@@ -256,4 +258,35 @@ class Post
     {
         return $this->estPublie;
     }
+
+    public function getFeedItemTitle()
+    {
+        return $this->titre;
+    }
+
+    public function getFeedItemDescription()
+    {
+        return $this->contenu;
+    }
+
+    public function getFeedItemPubDate()
+    {
+        return $this->datePublication;
+    }
+
+    public function getFeedItemRouteName()
+    {
+        return "voir_post";
+    }
+
+    public function getFeedItemRouteParameters()
+    {
+        return array('slug' => $this->slug);
+    }
+
+    public function getFeedItemUrlAnchor()
+    {
+        return "";
+    }
+
 }

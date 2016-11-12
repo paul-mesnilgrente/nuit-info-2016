@@ -7,18 +7,7 @@
 <p>Aucun article</p>
 {% else %}
   {% for post in posts %}
-    <h2>{{ post.titre }}</h2>
-    <p>
-      <small>{{ post.auteur.username }} | 
-        {{ post.datePublication is empty ?
-        "" : post.datePublication|date('d/m/Y à H:i') }}h
-      </small>
-    </p>
-    {{ post.contenu|raw }}
-    {% if is_granted('ROLE_AUTEUR') %}
-      <a class="btn btn-primary" href="{{ path('modifier_post', {'slug': post.slug}) }}">Modifier</a>
-      <a class="btn btn-danger" href="{{ path('supprimer_post', {'slug': post.slug}) }}">Supprimer</a>
-    {% endif %}
+    {% include 'post/voir_content.html.twig' %}
     {% if not loop.last %}<hr>{% endif %}
   {% endfor %}
 {% endif %}

@@ -81,3 +81,13 @@ stof_doctrine_extensions:
         default:
             sluggable: true
             timestampable: true
+
+eko_feed:
+    feeds:
+        post:
+            title:       'Mes articles/posts'
+            description: 'Les derniers posts du blog'
+            encoding:    'utf-8'
+            author:      'La Ligue des Informaticiens Extraordinaires' # Only required for Atom feeds
+            link:
+                route_name: homepage
