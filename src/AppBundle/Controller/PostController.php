@@ -49,6 +49,8 @@ class PostController extends Controller
             $em->persist($post);
             $em->flush();
 
+            $request->getSession()->getFlashBag()
+                ->add('info', "Le poste a bien été ajouté.");
             return $this->redirectToRoute('homepage');
         }
         return $this->render('post/ajouter.html.twig', 
@@ -69,7 +71,9 @@ class PostController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($post);
             $em->flush();
-
+            
+            $request->getSession()->getFlashBag()
+                ->add('info', "Le poste a bien été modifié.");
             return $this->redirectToRoute('homepage');
         }
         return $this->render('post/modifier.html.twig',

@@ -30,6 +30,8 @@ class MediaController extends Controller
             $em->persist($image);
             $em->flush();
 
+            $request->getSession()->getFlashBag()
+                ->add('info', "L'image a bien été ajouté.");
             return $this->redirectToRoute('homepage');
         }
         return $this->render('media/ajouter.html.twig', 
@@ -51,6 +53,8 @@ class MediaController extends Controller
             $em->persist($image);
             $em->flush();
 
+            $request->getSession()->getFlashBag()
+                ->add('info', "L'image a bien été modifié.");
             return $this->redirectToRoute('homepage');
         }
         return $this->render('media/modifier.html.twig',
@@ -82,7 +86,7 @@ class MediaController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->remove($image);
             $em->flush();
-            $request->getSession()->getFlashBag()->add('info', "Le imagee a bien été supprimé.");
+            $request->getSession()->getFlashBag()->add('info', "L'image a bien été supprimé.");
             return $this->redirect($this->generateUrl('homepage'));
         }
         return $this->render('media/supprimer.html.twig', array(
