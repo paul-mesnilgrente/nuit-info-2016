@@ -36,7 +36,9 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
-    form_themes: ['bootstrap_3_horizontal_layout.html.twig']
+    form_themes:
+      - 'bootstrap_3_horizontal_layout.html.twig'
+      - 'VichUploaderBundle:Form:fields.html.twig'
 
 # Doctrine Configuration
 doctrine:
@@ -91,3 +93,10 @@ eko_feed:
             author:      'La Ligue des Informaticiens Extraordinaires' # Only required for Atom feeds
             link:
                 route_name: homepage
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        image:
+            uri_prefix:         /blog/images/
+            upload_destination: '%kernel.root_dir%/../web/uploads'

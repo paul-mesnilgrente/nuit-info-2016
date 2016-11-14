@@ -6,7 +6,9 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PostType extends AbstractType
+use Vich\UploaderBundle\Form\Type\VichImageType;
+
+class ImageType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -14,9 +16,11 @@ class PostType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('titre')
-            ->add('estPublie')
-            ->add('contenu');
+            ->add('imageFile', VichImageType::class, array(
+            'required'      => true,
+            'allow_delete'  => true,
+            'download_link' => true,
+        ));
     }
     
     /**
@@ -25,7 +29,7 @@ class PostType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Post'
+            'data_class' => 'AppBundle\Entity\Image'
         ));
     }
 
@@ -34,7 +38,7 @@ class PostType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'appbundle_post';
+        return 'appbundle_image';
     }
 
 

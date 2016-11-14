@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Supprimer une image</h1> <hr>
+
+<div class="alert alert-danger" role="alert">
+  <p>
+    Êtes-vous bien sûr de vouloir supprimer cette image "{{ image.name }}".<br>
+    Cette image sera supprimer de la base de donnée et du système de fichier.
+  </p>
+  <img src="{{ image.path }}" alt="Image à supprimer">
+</div>
+
+{{ form_start(form) }}
+<input type="submit" class="btn btn-danger" value="Supprimer">
+{{ form_rest(form) }}
+{% endblock %}

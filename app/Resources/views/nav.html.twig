@@ -33,7 +33,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li{% if r == 'contact' %} class="active"{% endif %}><a href="{{ path('contact') }}">Contact</a></li>
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        <li{% if r == 'fos_user_profile_show' or r == 'fos_user_profile_edit' or r == 'fos_user_change_password' or r == 'fos_user_security_logout' or r == 'consulter_non_publies_post' or r == 'post_ajouter' %} class="active"{% endif %}>
+        <li{% if r == 'fos_user_profile_show' or r == 'fos_user_profile_edit' or r == 'fos_user_change_password' or r == 'fos_user_security_logout' or r == 'consulter_non_publies_post' or r == 'ajouter_post' or r == 'ajouter_media' or r == 'consulter_media'  %} class="active"{% endif %}>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <span class="glyphicon glyphicon-user"></span> <span class="caret">
           </a>
@@ -45,6 +45,11 @@
             {% if is_granted('ROLE_AUTEUR') %}
               <li{% if r == 'ajouter_post' %} class="active"{% endif %}><a href="{{ path('ajouter_post') }}">Ajouter un post</a></li>
               <li{% if r == 'consulter_non_publies_post' %} class="active"{% endif %}><a href="{{ path('consulter_non_publies_post') }}">Consulter les posts non publiés</a></li>
+              <li role="separator" class="divider"></li>
+            {% endif %}
+            {% if is_granted('ROLE_AUTEUR') %}
+              <li{% if r == 'ajouter_media' %} class="active"{% endif %}><a href="{{ path('ajouter_media') }}">Ajouter une image</a></li>
+              <li{% if r == 'consulter_media' %} class="active"{% endif %}><a href="{{ path('consulter_media') }}">Consulter les images</a></li>
               <li role="separator" class="divider"></li>
             {% endif %}
             <li{% if r == 'fos_user_security_logout' %} class="active"{% endif %}><a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a></li>
