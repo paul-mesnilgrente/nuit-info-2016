@@ -15,6 +15,24 @@ use AppBundle\Form\PostType;
 class PostController extends Controller
 {
     /**
+     * @Route("/transformer", name="transformer_post")
+     */
+    public function transformerAction(Request $request)
+    {
+        if ($request->getMethod() == 'POST') {
+            $data = $request->request->get('markdown');
+        } else {
+            $data = "Erreur dans l'usage. La requête doit être en post.";
+        }
+        $parser = $this->container->get('markdown.parser');
+        $html = $parser->transformMarkdown($data);
+
+        return $this->render('post/contenu.html.twig', array(
+            'html' => $html));
+    }
+
+
+    /**
      * @Route("/ajouter", name="ajouter_post")
      */
     public function ajouterAction(Request $request)

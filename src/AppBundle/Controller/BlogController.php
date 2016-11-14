@@ -15,6 +15,10 @@ class BlogController extends Controller
      */
     public function voirAction(Request $request, Post $post)
     {
+        $parser = $this->container->get('markdown.parser');
+        $html = $parser->transformMarkdown($post->getContenu());
+        $post->setContenu($html);
+        
         return $this->render('post/voir.html.twig', array(
             'post' => $post));
     }
