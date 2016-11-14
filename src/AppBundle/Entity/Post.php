@@ -26,7 +26,7 @@ class Post implements RoutedItemInterface
 
     /**
      * @var \DateTime
-     *
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(name="dateCreation", type="datetime", unique=true)
      */
     private $dateCreation;
@@ -45,7 +45,7 @@ class Post implements RoutedItemInterface
      *
      * @ORM\Column(name="estPublie", type="boolean")
      */
-    private $estPublie;
+    private $estPublie = false;
 
     /**
      * @var User
@@ -74,11 +74,6 @@ class Post implements RoutedItemInterface
      * @ORM\Column(name="contenu", type="text")
      */
     private $contenu;
-
-    public function __construct() {
-        $this->dateCreation = new \Datetime();
-        $this->estPublie = false;
-    }
 
     /**
      * Get id

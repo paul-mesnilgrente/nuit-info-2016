@@ -3,7 +3,7 @@
   <p>
     <small>{{ post.auteur.username }} | 
       {{ post.datePublication is empty ?
-      "" : post.datePublication|date('d/m/Y à H:i') }}h
+      "" : post.datePublication|date('d/m/Y à H\\hi') }}
     </small>
   </p>
   {% include 'post/contenu.html.twig' with {'html': post.contenu} %}
