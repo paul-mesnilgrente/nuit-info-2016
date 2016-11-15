@@ -100,3 +100,6 @@ vich_uploader:
         image:
             uri_prefix:         /uploads
             upload_destination: '%kernel.root_dir%/../web/uploads'
+            # namer:
+            #     service: vich_uploader.namer_property
+            #     options: { property: 'slug'}

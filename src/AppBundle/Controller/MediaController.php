@@ -6,6 +6,8 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
+use Gedmo\Sluggable\Util as Sluggable;
+
 use AppBundle\Entity\Image;
 use AppBundle\Form\ImageType;
 
@@ -24,8 +26,7 @@ class MediaController extends Controller
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $image = $form->getData();
-
+            // il faut ici appelé setSlug
             $em = $this->getDoctrine()->getManager();
             $em->persist($image);
             $em->flush();
