@@ -5,10 +5,10 @@
 
 <div class="alert alert-danger" role="alert">
   <p>
-    Êtes-vous bien sûr de vouloir supprimer cette image "{{ image.name }}".<br>
+    Êtes-vous bien sûr de vouloir supprimer cette image "{{ image.imageName }}".<br>
     Cette image sera supprimer de la base de donnée et du système de fichier.
   </p>
-  <img src="{{ image.path }}" alt="Image à supprimer">
+  <img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="{{ image.imageName }}" height=200 />
 </div>
 
 {{ form_start(form) }}

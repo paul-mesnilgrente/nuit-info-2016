@@ -39,7 +39,7 @@ class MediaController extends Controller
     }
 
     /**
-     * @Route("/modifier/{slug}", name="modifier_media")
+     * @Route("/modifier/{id}", name="modifier_media")
      */
     public function modifierAction(Request $request, Image $image)
     {
@@ -67,14 +67,16 @@ class MediaController extends Controller
     public function consulterAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $images = $em->getRepository('AppBundle:Image')->findAll();
+        $images = $em->getRepository('AppBundle:Image')->findBy(
+            array(),
+            array('updatedAt' => 'desc'));
 
         return $this->render('media/consulter.html.twig',
             array('images' => $images));
     }
 
     /**
-     * @Route("/supprimer/{slug}", name="supprimer_media")
+     * @Route("/supprimer/{id}", name="supprimer_media")
      */
     public function supprimerAction(Request $request, Image $image)
     {

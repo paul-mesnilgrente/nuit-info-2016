@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>Les articles non publiés</h1><hr>
+
+{% if images is empty %}
+  <p>Aucune image encore ajouté</p>
+{% else %}
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Date d'upload</th>
+        <th>Image</th>
+        <th>Chemin</th>
+        <th>Markdown</th>
+        <th>HTML centrée</th>
+        <th>Modifier / Supprimer</th>
+      </tr>
+    </thead>
+    {% for image in images %}
+      <tr>
+        <th>{{ image.updatedAt|date('d/m/Y H\\hi') }}</th>
+        <td><img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="{{ image.imageName }}" height=100 /></td>
+        <td>{{ vich_uploader_asset(image, 'imageFile') }}</td>
+        <td><code>{{ "![Message alt](/uploads/<nom_du_fichier.extension>)"|escape }}</code></td>
+        <td><code>{{ "<img class=\"img-responsive center-block\" src=\"/uploads/<nom_du_fichier.extension\" width=<largeur en pixel> />"|escape }}</code></td>
+        <td>
+          <a href="{{ path('modifier_media', {'id': image.id}) }}"><span class="glyphicon glyphicon-edit" aria-label="Modifier"></span></a> /
+          <a href="{{ path('supprimer_media', {'id': image.id}) }}"><span class="glyphicon glyphicon-trash" aria-label="Supprimer"></span></a>
+        </td>
+      </tr>
+    {% endfor %}
+    <tr>
+    </tr>
+  </table>
+{% endif %}
+{% endblock %}
