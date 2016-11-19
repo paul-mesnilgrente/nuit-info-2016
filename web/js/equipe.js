@@ -47,12 +47,12 @@ $(document).ready(function() {
 			strokeWidth: 5,
 			trailWidth: 1,
 			easing: 'easeInOut',
-			duration: 1400,
+			duration: 2000,
 			text: {
 				autoStyleContainer: false
 			},
 			from: { color: colori, width: 1 },
-			to: { color: colori, width: 4 },
+			to: { color: colori, width: 5.5 },
 			// Set default step function for all animate calls
 			step: function(state, circle) {
 				circle.path.setAttribute('stroke', state.color);
