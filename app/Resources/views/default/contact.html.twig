@@ -1,5 +1,45 @@
 {% extends 'base.html.twig' %}
 
+{% block head %}
+<link href="{{ asset('css/contact.css') }}" rel="stylesheet">
+{% endblock %}
+
+
 {% block body %}
 <h1>Contact</h1>
+
+<div class="formation">
+    <h2>La Nuit de l'Info</h2>
+    <a href="http://www.nuitdelinfo.com/" >
+        <img src="{{ asset('img/nuit-info.jpg') }}" />
+    </a>
+</div>
+
+<div class="formation">
+    <h2>UPSSITECH - Système Robotiques et Intéractifs (SRI)</h2>
+    <iframe class="googleMaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.17064038034!2d1.4681560383586088!3d43.56132731520859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x94b80905f127941a!2sU3+UPSSITECH+-+Amphi+DAURAT+-+Universit%C3%A9+Paul+Sabatier+Toulouse+III!5e0!3m2!1sen!2sfr!4v1479593712914" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <a href="http://sri.univ-tlse3.fr/" >
+        <img src="{{ asset('img/sri.png') }}" />
+    </a>
+    <ul>
+        <li>
+            <h3>Responsables d'année :</h3>
+            <ul>
+                <li>Première année : <a href="mailto:agnan@laas.fr">Agnan de BONNEVAL</a></li>
+                <li>Seconde année : <a href="mailto:julien.pinquier@laas.fr">Julien PINQUIER</a></li>
+                <li>Troisième année : <a href="mailto:philippe.truillet@irit.fr@laas.fr">Philippe TRUILLET</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="formation">
+    <h2><mark>BTS de Sarah</mark></h2>
+    <iframe class="googleMaps" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14769.79509433121!2d1.4142974390290872!3d38.90187138365405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbts+de+sarah!5e0!3m2!1sen!2sfr!4v1479596267362" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+
+
 {% endblock %}
