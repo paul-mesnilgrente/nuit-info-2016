@@ -13,6 +13,27 @@ body {
     color: black;
 }
 
+.chiffres{
+    text-align: center;
+}
+
+.progress {
+    margin: 20px;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    background-color: inherit;
+    text-align: center;
+}
+
+.progress > svg {
+    height: 100%;
+    display: block;
+}
+
 #tri-equipe {
     margin-top: 20px;
     margin-bottom: 20px;

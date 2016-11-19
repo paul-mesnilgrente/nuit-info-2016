@@ -2,14 +2,11 @@
 
 {% block body %}
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 chiffres">
       <h1>Nos chiffres</h1>
-      <ul>
-        <li>18 étudiants en ingénierie</li>
-        <li>3 années différentes</li>
-        <li>1 école</li>
-      </ul>
-      Ici il faudrait mettre un compteur en Javascript et un joli CSS avec des gros chiffres
+      <div class="col-md-4"><div class="progress" value="18" color="#ff0000"></div>18 étudiants en ingénierie</div>
+      <div class="col-md-4"><div class="progress" value="3" color="#00ff00"></div>3 années différentes</div>
+      <div class="col-md-4"><div class="progress" value="1" color="#0000ff"></div>1 école</div>
     </div>
     <div class="col-md-8">
       <h1 class="text-center">Équipe</h1>
@@ -65,4 +62,5 @@
 
 {% block javascripts %}
 <script src="{{ asset('js/equipe.js') }}"></script>
+<script src="{{ asset('js/progressbar.min.js') }}"></script>
 {% endblock %}
