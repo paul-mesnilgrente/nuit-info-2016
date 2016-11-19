@@ -1,0 +1,46 @@
+<footer class="footer">
+	<div class="container">
+		<div class="col-md-12 images">
+			<h1>Nous représentons l'UPSSITECH et la formation SRI pour la nuit de l'info !</h1>
+			<div class="col-md-4">
+				<img src="{{ asset('img/logo_upssitech.png') }}">
+			</div>
+			<div class="col-md-4">
+				<img src="{{ asset('img/nuit-info.jpg') }}">
+			</div>
+			<div class="col-md-4">
+				<img src="{{ asset('img/sri.png') }}">
+			</div>
+		</div>
+		<div class="col-md-12">
+			<hr>
+			<div class="col-md-4">
+				{% set r = app.request.get('_route') %}
+				<h3>Navigation</h3>
+				<ul class="col-md-4">
+					<li{% if r == 'homepage' %} class="active"{% endif %}><a href="{{ path('homepage') }}">Accueil</a></li>
+	        		<li{% if r == 'equipe' %} class="active"{% endif %}><a href="{{ path('equipe') }}">Notre équipe</a></li>
+				</ul>
+				<ul class="col-md-4">
+		            <li{% if r == 'presentation' %} class="active"{% endif %}><a href="{{ path('presentation') }}">Présentation</a></li>
+		            <li{% if r == 'utilisateur' %} class="active"{% endif %}><a href="{{ path('utilisateur') }}">Documentation utilisateur</a></li>
+		            <li{% if r == 'conception' %} class="active"{% endif %}><a href="{{ path('conception') }}">Conception</a></li>
+		            <li{% if r == 'projet' %} class="active"{% endif %}><a href="{{ path('projet') }}">Démonstration</a></li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h3>Les réseaux de la nuit de l'info !</h3>
+				<div class="social_icons">
+					<a href="https://twitter.com/nuitinfo?lang=fr"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+					<a href="https://www.facebook.com/NewsGeeksFLM/?fref=ts"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+					<a href="https://www.youtube.com/user/SuperSageto"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a>
+					<a href="https://www.twitch.tv/newsgeeks_gaming"><i class="fa fa-twitch fa-2x" aria-hidden="true"></i></a>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<h3>Qui sommes nous ?</h3>
+				<p>L'UPSSITECH (Université Paul Sabatier Sciences de l'Ingenierie et des Technologies) est une école d'ingénieurs interne gérant les formations habilitées à délivrer le titre d'ingénieur de l'Université Paul Sabatier. Cette école est un département à autonomie renforcée de la Faculté des Sciences et d'Ingénierie. Nous représentons pour la nuit de l'info la formation SRI (Systèmes Robotiques et Intéractifs).</p>
+			</div>
+		</div>
+	</div>
+</footer>
