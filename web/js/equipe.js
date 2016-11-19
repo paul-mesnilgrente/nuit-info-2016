@@ -69,6 +69,7 @@ $(document).ready(function() {
 		});
 		bar.text.style.fontSize = '4rem';
 		bar.text.style.color = colori;
+		bar.text.style.fontWeight = 'bold';
 
 		bar.animate(1.0);  // Number from 0.0 to 1.0
 	});
