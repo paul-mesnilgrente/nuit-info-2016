@@ -198,3 +198,9 @@ img {
         width: 1600px;
     }
 }
+
+@media screen and (max-width: 991px){
+    .container {
+        padding: 0 0 0 0;
+    }
+}
