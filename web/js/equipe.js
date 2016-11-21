@@ -44,7 +44,7 @@ $(document).ready(function() {
 			color: colori,
 			// This has to be the same size as the maximum width to
 			// prevent clipping
-			strokeWidth: 5,
+			strokeWidth: 7,
 			trailWidth: 1,
 			easing: 'easeInOut',
 			duration: 2000,
@@ -52,7 +52,7 @@ $(document).ready(function() {
 				autoStyleContainer: false
 			},
 			from: { color: colori, width: 1 },
-			to: { color: colori, width: 5.5 },
+			to: { color: colori, width: 7 },
 			// Set default step function for all animate calls
 			step: function(state, circle) {
 				circle.path.setAttribute('stroke', state.color);
@@ -69,7 +69,7 @@ $(document).ready(function() {
 		});
 		bar.text.style.fontSize = '4rem';
 		bar.text.style.color = colori;
-		bar.text.style.fontWeight = 'bold';
+		//bar.text.style.fontWeight = 'bold';
 
 		bar.animate(1.0);  // Number from 0.0 to 1.0
 	});

@@ -149,6 +149,10 @@ footer .images .col-md-4{
     text-align: center;
 }
 
+footer .images img{
+    max-width: 100%;
+}
+
 footer a{
     color: white;
 }
