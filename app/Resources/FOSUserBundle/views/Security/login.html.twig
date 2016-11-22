@@ -3,3 +3,7 @@
 {% block fos_user_content %}
     {{ include('FOSUserBundle:Security:login_content.html.twig') }}
 {% endblock fos_user_content %}
+
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset('js/login.js') }}"></script>
+{% endblock %}

@@ -3,7 +3,7 @@
 <h1>Connexion / <small><a id="register" href="{{ path('fos_user_registration_register') }}">Vous n'avez pas de compte ?</a></small></h1><hr>
 
 {% if error %}
-    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    <div class="alert alert-danger"><b>{{ error.messageKey|trans(error.messageData, 'security') }}</b><i class="fa fa-times" aria-hidden="true"></i></div>
 {% endif %}
 
 <form class="form-horizontal" action="{{ path("fos_user_security_check") }}" method="post">

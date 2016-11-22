@@ -5,6 +5,10 @@
     src: local('Eras Light ITC'), url('../font-awesome/fonts/ERASLGHT.woff') format('woff');
 }
 
+.navbar-inverse, footer{
+    background-color: #222;
+}
+
 body {
     padding-top: 70px;
 }
@@ -134,7 +138,6 @@ http://stackoverflow.com/questions/12115833/adding-a-slide-effect-to-bootstrap-d
 /*                    FOOTER DE PAGE                      */
 /**********************************************************/
 footer{
-    background-color: #222;
     color: white;
     padding: 10 0;
     text-align: justify;
@@ -246,6 +249,17 @@ footer .social_icons .fa:hover{
 }
 img {
     vertical-align:top;
+}
+
+/************************************************************/
+/*                      PAGE CONNEXION                      */
+/************************************************************/
+.fa-times{
+    float: right;
+}
+
+.fa-times:hover{
+    cursor: pointer;
 }
 
 /* ============================================================== */
