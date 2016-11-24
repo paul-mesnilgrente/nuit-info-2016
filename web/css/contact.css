@@ -1,14 +1,13 @@
 
 .googleMaps{
     float: right;
-    margin-left: 10%;
+    margin-bottom: 1em;
+    padding: 0;
     /* Shadow */
     -webkit-box-shadow: 2px 6px 13px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 6px 13px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 6px 13px 0px rgba(0,0,0,0.75);
 }
-
-
 
 .formation{
     overflow: hidden;
@@ -16,14 +15,32 @@
     text-align: center;
 }
 
-.formation h2{
-    color: #222;
-    padding: 0 1em 0 1em;
-}
+    .formation h2{
+        color: #222;
+        padding: 0 1em 0 1em;
+    }
 
-.formation ul{
-    text-align: left;
-}
+    .formation ul{
+        text-align: left;
+    }
+
+        .formation ul h4 {
+            margin: 0.3em;
+        }
+
+    .formation .imgLien {
+        margin-bottom: 1em;
+        padding: 0;
+
+        /* Shadow */
+        -webkit-box-shadow: 2px 6px 13px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 2px 6px 13px 0px rgba(0,0,0,0.75);
+        box-shadow: 2px 6px 13px 0px rgba(0,0,0,0.75);
+    }
+
+        .formation .imgLien img {
+            padding: 0;
+        }
 
 .title-box {
     height:100%;
@@ -49,7 +66,8 @@
 
 @media screen and (max-width: 991px){
     .googleMaps {
-        float: none;
+        /*float: none;*/
         margin-left: 0;
+        margin-bottom: 1.5em;
     }
 }

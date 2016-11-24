@@ -6,36 +6,56 @@
 
 
 {% block body %}
-<h1>Contact</h1>
+<h1>Contacts</h1>
 
 <div class="col-md-12 formation">
-    <div class="title-box"> 
+    <div class="title-box">
         <fieldset class="title-outer">
             <legend id="titleInner" class="title-inner">La Nuit de l'Info</legend>
         </fieldset>
     </div>
-    <a href="http://www.nuitdelinfo.com/" target=_blank>
-        <img src="{{ asset('img/nuit-info.jpg') }}" />
+    <a href="http://www.nuitdelinfo.com/" class="col-md-5 col-sm-12 col-xs-12 imgLien" target=_blank>
+        <img class="col-md-12 col-sm-12 col-xs-12" src="{{ asset('img/nuit-info.jpg') }}" />
     </a>
+    <iframe class="googleMaps col-md-6 col-sm-12 col-xs-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2890.4270984840496!2d1.3106507513258885!3d43.576819465281595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aeb73a45277e37%3A0xc9c407c440dfd197!2sLyc%C3%A9e+Polyvalent+M.l+Dissard+Fran%C3%A7oise!5e0!3m2!1sen!2sfr!4v1480013870792" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <ul class="col-sm-12 col-md-12">
+        <li>
+            <h4>L'info en bref :</h4>
+            <ul>
+                <li>Contact principal du site Toulousain : <a href="mailto:stephane.isnard@gmail.com ">Stephane ISNARD</a></li>
+                <li>Nombre de partisPissants : 291</li>
+                <li>Nombre d'équipes : 30</li>
+            </ul>
+        </li>
+    </ul>
 </div>
 
 <div class="col-md-12 formation">
-    <div class="title-box"> 
+    <div class="title-box">
         <fieldset class="title-outer">
             <legend id="titleInner" class="title-inner">UPSSITECH - Système Robotiques et Intéractifs (SRI)</legend>
         </fieldset>
     </div>
-    <iframe class="googleMaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.17064038034!2d1.4681560383586088!3d43.56132731520859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x94b80905f127941a!2sU3+UPSSITECH+-+Amphi+DAURAT+-+Universit%C3%A9+Paul+Sabatier+Toulouse+III!5e0!3m2!1sen!2sfr!4v1479593712914" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-    <a href="http://sri.univ-tlse3.fr/" target=_blank>
-        <img src="{{ asset('img/sri.png') }}" />
+    <a href="http://sri.univ-tlse3.fr/" class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2 imgLien" target=_blank>
+        <img class="col-md-12 col-sm-12 col-xs-12" src="{{ asset('img/sri.png') }}" />
     </a>
-    <ul>
-        <li class="col-sm-12 col-md-6">
-            <h3>Responsables d'année :</h3>
+    <iframe class="googleMaps col-md-6 col-sm-12 col-xs-12" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891.17064038034!2d1.4681560383586088!3d43.56132731520859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x94b80905f127941a!2sU3+UPSSITECH+-+Amphi+DAURAT+-+Universit%C3%A9+Paul+Sabatier+Toulouse+III!5e0!3m2!1sen!2sfr!4v1479593712914" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <ul class="col-sm-12 col-md-12">
+        <li>
+            <h4>Directeur de la spécialité SRI : <a href="mailto=lerasle@laas.fr">Frédéric Lerasle</a></h4>
+        </li>
+        <li>
+            <h4>Directrice des études : <a href="mailto=isabelle.ferrane@laas.fr">Isabelle Ferrané</a></h4>
+
+        </li>
+        <li>
+            <h4>Responsables d'année :</h4>
             <ul>
-                <li>Première année : <a href="mailto:agnan@laas.fr">Agnan de BONNEVAL</a></li>
-                <li>Seconde année : <a href="mailto:julien.pinquier@laas.fr">Julien PINQUIER</a></li>
-                <li>Troisième année : <a href="mailto:philippe.truillet@irit.fr@laas.fr">Philippe TRUILLET</a></li>
+                <li>Première année : <a href="mailto:agnan@laas.fr">Agnan de Bonneval</a></li>
+                <li>Seconde année : <a href="mailto:julien.pinquier@laas.fr">Julien Pinquier</a></li>
+                <li>Troisième année : <a href="mailto:philippe.truillet@irit.fr@laas.fr">Philippe Truillet</a></li>
             </ul>
         </li>
     </ul>
@@ -44,12 +64,26 @@
 
 
 <div class="col-md-12 formation">
-    <div class="title-box"> 
+    <div class="title-box">
         <fieldset class="title-outer">
             <legend id="titleInner" class="title-inner">BTS de Sarah</legend>
         </fieldset>
     </div>
-    <iframe class="googleMaps" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14769.79509433121!2d1.4142974390290872!3d38.90187138365405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbts+de+sarah!5e0!3m2!1sen!2sfr!4v1479596267362" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <a href="http://www.nuitdelinfo.com/" class="col-md-5 col-sm-12 col-xs-12 imgLien" target=_blank>
+        <img class="col-md-12 col-sm-12 col-xs-12" src="{{ asset('img/nuit-info.jpg') }}" />
+    </a>
+    <iframe class="googleMaps col-md-6 col-sm-12 col-xs-12" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14769.79509433121!2d1.4142974390290872!3d38.90187138365405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbts+de+sarah!5e0!3m2!1sen!2sfr!4v1479596267362" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <ul class="col-sm-12 col-md-12">
+        <li>
+            <h4>L'info en bref :</h4>
+            <ul>
+                <li>Un point</li>
+                <li>Un point</li>
+                <li>Un point</li>
+            </ul>
+        </li>
+    </ul>
 </div>
 
 
