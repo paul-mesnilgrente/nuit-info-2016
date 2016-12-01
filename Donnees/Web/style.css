@@ -1,0 +1,45 @@
+body {
+	background-color: #c8c8c8;
+	margin-top:20px;
+	margin-left:30px;
+	margin-right:30px;
+	margin-bottom:20px
+	}
+h1,h2 {
+	color: red;
+	}
+h1 {
+	text-align: center
+	}
+h2{
+	margin-left:-15px
+	}
+p{
+	text-align: justify
+	}
+p.special{
+	color:red
+	}
+table{
+	margin-left: 100px;
+	background-color: yellow
+	}
+th{
+	background-color:#00FFFF
+	}
+.titreLivre{
+	font-style:italic
+	}
+a:link {
+	color: red
+	} 
+a:visited {
+	color: blue
+	} 
+a:hover {
+	color: yellow
+	} 
+a:active {
+	color: lime
+	}
+	
