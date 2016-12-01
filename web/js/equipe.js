@@ -17,25 +17,15 @@ $(document).ready(function() {
 		});
 		return false;
 	});
-	$('a[href="#1D"]').click(function() {
+	$('a[defi]').click(function() {
+		var defi = $(this).text();
 		$('div.col-md-3:visible').fadeOut("slow", function() {
-			$('div.col-md-3:contains(Défi 1)').fadeIn();
-		});
-		return false;
-	});
-	$('a[href="#2D"]').click(function() {
-		$('div.col-md-3:visible').fadeOut("slow", function() {
-			$('div.col-md-3:contains(Défi 2)').fadeIn();
-		});
-		return false;
-	});
-	$('a[href="#3D"]').click(function() {
-		$('div.col-md-3:visible').fadeOut("slow", function() {
-			$('div.col-md-3:contains(Défi 3)').fadeIn();
+			$('div.col-md-3:contains('+defi+')').fadeIn();
 		});
 		return false;
 	});
 
+	// Barre de progression circulaire
 	$('.progress').each(function(){
 		var size = $(this).attr('value');
 		var colori = $(this).attr('color');
