@@ -1,7 +1,7 @@
 <div class="col-md-3">
   <div class="carte-equipe">
     <div class="image">
-      <img class="img-responsive" src="https://placehold.it/400x250" />
+      <img class="img-responsive" src="{{ asset('img') }}/{{img}}.jpg"/>
       <div class="overlay"><a href="#" class="btn btn-primary">Télécharger le CV</a></div>
     </div>
     <h2>{{ nom }}</h2>
@@ -9,7 +9,7 @@
       <dt>Rôle :</dt><dd>{{ role }}</dd>
       <dt>Année :</dt><dd>{{ annee }}</dd>
       <dt>Compétences :</dt><dd>{{ competences }}</dd>
-      <dt>Travail sur :</dt><dd>{{ defi }}</dd>
+      <dt>Travail sur :</dt><dd>{{ defi|join(',') }}</dd>
     </dl>
     <div class="footer text-right">
       <ul class="list-inline">
