@@ -49,3 +49,16 @@
     font-size: 21pt;
     color: #333;
 }
+
+.informationDefieur{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.progress{
+    font-size: 2rem;
+}
+
+li{
+    margin-bottom: 0.7em;
+}
