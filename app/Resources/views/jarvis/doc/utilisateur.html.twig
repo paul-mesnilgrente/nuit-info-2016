@@ -1,5 +1,114 @@
 {% extends 'base.html.twig' %}
 
+{% block head %}
+<link href="{{ asset('css/jarvis.css') }}" rel="stylesheet">
+{% endblock %}
+
+
 {% block body %}
-<h1>Utilisateur</h1>
+<h1>Manuel d'utilisateur</h1>
+
+<p>
+    L’assistant personnel permet d’être lancé à tout moment.<br />L’utilisateur lance
+    l’application et peut demander une requête à son Assistant à tout moment parmi
+    tous les modules existants dans son interface. Pour cela, L’utilisateur doit appeler
+    l’Assistant par son nom pour qu’il puisse demander sa requête. Si l’utilisateur a
+    plusieurs requêtes, il peut les faire sans le rappeler après chaque requête, simulant
+    une discussion entre l’utilisateur et lui.<br />
+    Un script test_sentence.py permet de tester une phrase écrite en paramètre pour
+    voir la réaction de celle-ci sur l’Assitant personnel.<br />
+    Un autre script, pour les développeur, permet de tester tous les exemples enregistrés
+    dans chaque module pour vérifier la pertinence des phrases s’ils veulent créer de nouveaux modules.
+    Ce module d'Assistant Personnel est vocal et peut répondre à des thèmes variés comme : <br /><br />
+</p>
+<ul>
+    <li>
+        <strong>Le cinéma</strong> : Ce module interagit avec
+        <a href="www.themoviedb.org" target=__blank>The movie db</a> pour répondre
+        aux questions en rapport avec le cinéma.<br />
+        <strong>Exemples</strong> : Scarlett Johanson a joué dans quel film,
+        combien a rapporté le film Matrix, Montre moi la bande-annonce de Matrix, Que raconte
+        Matrix ... etc
+    </li>
+    <li>
+        <strong>Météo</strong> : Ce module utilise le logiciel Curl pour connaître
+        la météo en accédant au site <a href="http://wttr.in/" target=__blank>WTTR</a>.<br />
+        <strong>Exemples</strong> : Fait-il beau, dois-je prendre un parapluie,
+        Quel temps fait-il à Tokyo, un pull sera suffisant ...etc
+    </li>
+    <li>
+        <strong>Réveil</strong> : Ce module utilise la commande <strong>at</strong>
+        de Ubuntu pour lancer une musique à l'heure précisée par l'utilisateur.<br />
+        <strong>Exemples</strong> : Met un réveil à 16h, Fais moi sonner dans 30 minutes ...etc
+    </li>
+    <li>
+        <strong>Mémos</strong> : Ce module utilise aussi la commande <strong>at</strong>
+        de Ubuntu pour rappeler la note à l'utilisateur.<br />
+        <strong>Exemples</strong> : Rappelle moi de faire la vaiselle à 16h, Redis
+        moi ce que je dois faire, Dis moi dans 30 min de dormir...etc
+    </li>
+    <li>
+        <strong>Web</strong> : Ce module fait une recherche sur Google, YouTube,
+        Amazon, eBay, GoogleImages et affiche les résultats dans la page adéquate.<br />
+        <strong>Exemples</strong> : Recherche "nuit de l'info" sur Google, montre
+        moi des images de chats, Recherche câble électrique sur Amazon ...etc
+    </li>
+    <li>
+        <strong>Conversion</strong> : Ce module convertit des unités mais n'est
+        pas encore parfait.<br />
+        <strong>Exemples</strong> : Que vaut 10 dollars en euros, que fait
+        1 litre en mètres cube ...etc
+    </li>
+    <li>
+        <strong>Sms</strong> : Ce module necessite l'API <strong>TWILLIO</strong>
+        pour envoyer des sms, via l'ordinateur, au destinateur du choix.<br />
+        <strong>Exemples</strong> : Envoie un sms à Maxime, Nouveau message ...etc
+    </li>
+    <li>
+        <strong>Question générale</strong> : Ce module permet de poser des
+        questions simples et prédéfinies.<br />
+        <strong>Exemples</strong> : Quel est le sens de la vie, Qui es-tu,
+        quel jour on est, Quel heure est-il ...etc
+    </li>
+    <li>
+        <strong>Gestion ordinateur</strong> : Ce module permet de faire des
+        requêtes de bases sur son ordinateur.<br />
+        <strong>Exemples</strong> : Coupe le son, monte le son, ouvre le logiciel
+        Arduino, vide la corbeille, ouvre le dossier conception ...etc
+    </li>
+    <li>
+        <strong>Politesse</strong> : Ce module permet de répondre à un utilisateur
+        qui dirait "Merci" après que le système ait effectué sa requête.<br />
+        <strong>Exemples</strong> : Si vous le remerciez, il vous répond poliment
+        avec des variantes de réponses.
+    </li>
+    <li>
+        <strong>Provocation</strong> : Ce module fait comprendre à l'utilisateur
+        qu'il n'est pas sympathique de jurer face à son ordinateur.<br />
+        <strong>Exemples</strong> : Si vous ne lui parlez pas correctement (juron),
+        il ne répondra pas à votre requête.
+    </li>
+    <li>
+        <strong>Traduction</strong> : Ce module utilise <strong>Google
+        traduction</strong> pour traduire tous types de phrases.<br />
+        <strong>Exemples</strong> : Que veux dire xxx en anglais, donne moi la
+        traduction en espagnol de je suis un chat, ...etc
+    </li>
+    <li>
+        <strong>Wikipedia</strong> : Ce module utilise l'API Wikipedia pour rechercher
+        dans l'éventail de domaines proposés par Wikipedia.<br />
+        <strong>Exemples</strong> : Recherche sur Wikipedia Barack Obama, Recherche
+        sur Wikipedia entièrement ...etc
+    </li>
+    <li>
+        <strong>Active</strong> : Ce module notifie l'utilisateur des mises à jour
+        de différents services.<br />
+        <strong>Exemples</strong> : J'ai un nouveau mail sur Gmail ou Outlook,
+        une Breaking news sur BBC, quand je dois faire telles choses du mémo ...etc
+    </li>
+</ul>
+
+ Cet éventail de modules est assez important mais les possibilités sont encore
+ vastes et des modules tels que Kinect, Bluetooth, Facebook, Google Map, ou Piloter
+ un robot vocalement peuvent être des idées intéressantes.
 {% endblock %}

@@ -1,5 +1,98 @@
 {% extends 'base.html.twig' %}
 
+{% block head %}
+<link href="{{ asset('css/jarvis.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
 <h1>Présentation du projet</h1>
+
+    <div class="title-box">
+        <fieldset class="title-outer">
+            <legend id="titleInner" class="title-inner">Le défieur</legend>
+        </fieldset>
+    </div>
+    
+    <div class="col-md-4 col-sm-4 col-xs-4">
+        <img src="{{ asset('img/cgi.jpeg') }}" />
+    </div>
+
+    <div class="informationDefieur">
+        Fondée en 1976, Groupe CGI inc. est la 5ème plus importante entreprise
+        indépendante de conseil et services en technologies de l’information au
+        monde. Grâce à ses quelques 68 000 professionnels, CGI offre un portefeuille
+        complet de services, y compris des services-conseils stratégiques en
+        informatique et en management, des services d'intégration de systèmes, de
+        développement et de maintenance d'applications informatiques, de gestion
+        d'infrastructures technologiques ainsi qu'une vaste gamme de solutions
+        exclusives à des milliers de clients à l'échelle mondiale à partir de ses
+        bureaux et centres mondiaux de prestation de services dans les Amériques,
+        en Europe et en Asie-Pacifique. En France, CGI est le 4ème acteur sur le
+        marché et compte 10 000 professionnels répartis dans 21 villes. <br />
+        <a href="https://www.youtube.com/watch?v=H4r3eQ9ZJM8" target=__blank>CGI en bref, are you ready ?</a>
+    </div><br  />
+
+
+    <div class="title-box">
+        <fieldset class="title-outer">
+            <legend id="titleInner" class="title-inner">Le défi</legend>
+        </fieldset>
+    </div>
+
+
+    <div class="informationDefieur">
+        Une intelligence artificielle menace la Nuit de l’Info 2016 et le monde !<br / />
+        Les super-héros CGI sont déjà sur le front. Ils ont besoin de renforts
+        pour mettre un terme à ce grand danger. C’est pourquoi nous sollicitons
+        les meilleurs super-informaticiens de la galaxie, vous !<br / />
+        Une seule possibilité, créer une IA encore plus puissante, pour
+        conserver notre liberté.<br />
+        Vous collaborerez activement avec vos équipiers via un outil de
+        versioning (type Github) et mettrez tout en oeuvre pour développer un
+        remplaçant du vaillant JARVIS tombé courageusement au combat.<br />
+        N’oubliez pas, j’aurai l’oeil sur vous <br /><br />
+        <strong>Pour réussir sa mission</strong>, l’IA devra :
+        <ul>
+            <li>
+                Avoir conscience de son existence en étant capable de se présenter
+            </li>
+            <li>
+                Répondre aux questions les
+                plus urgentes de nos super héros et les assister dans leur mission en
+                accédant à la base de données encyclopédique universelle libre
+            </li>
+            <li>
+                Donner
+                un peu de répit aux super-héros en leur racontant des blagues, le
+                quotidien sur le champ de bataille étant très dur
+            </li>
+        </ul>
+    </div>
+
+    <div class="title-box">
+        <fieldset class="title-outer">
+            <legend id="titleInner" class="title-inner">Les critères</legend>
+        </fieldset>
+    </div>
+
+
+    <div class="informationDefieur">
+        Pour vaincre nos adversaires, il faut prendre en compte les points suivant:
+        <ul>
+            <li>Utilisation du versionning – travail en équipe <strong>/3</strong></li>
+            <li>Clarté et concision du document word de présentation <strong>/1</strong></li>
+            <li>L’IA a conscience de son existence <strong>/1</strong></li>
+            <li>L’IA répond à des questions, accède à Wikipedia <strong>/2</strong></li>
+            <li>L’IA raconte plusieurs blagues <strong>/2</strong></li>
+            <li>Créativité <strong>/3</strong>(choix de la solution fonctionnelle, design, …)</li>
+            <li>Technicité <strong>/3</strong></li>
+            <li>Ergonomie <strong>/2</strong></li>
+            <li>L’IA a d’autres fonctionnalités (features) – <strong>jusqu’à 2 points bonus</strong></li>
+        </ul>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script type="text/javascript" src="{{ asset('js/contact.js') }}"></script>
 {% endblock %}
