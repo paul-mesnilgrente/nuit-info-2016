@@ -23,6 +23,10 @@ $(function () {
                 text: 'Immigration en Europe'
             },
 
+            chart:{
+                height: 700
+            },
+
             legend: {
                 layout: 'horizontal',
                 borderWidth: 0,
@@ -32,8 +36,16 @@ $(function () {
                 y: 25
             },
 
-            mapNavigation: {
-                enabled: true
+            colorAxis: {
+                min: 1,
+                type: 'logarithmic',
+                minColor: '#EEEEFF',
+                maxColor: '#000022',
+                stops: [
+                    [0, '#B3A4FF'],
+                    [0.67, '#4F41D1'],
+                    [1, '#2B2094']
+                ]
             },
             
             series: [{
@@ -42,7 +54,7 @@ $(function () {
                 },
                 data: data,
                 mapData: Highcharts.maps['custom/europe'],
-                joinBy: ['postal-code', 'code'],
+                joinBy: ['iso-a2', 'code'],
                 dataLabels: {
                     enabled: true,
                     color: '#FFFFFF',

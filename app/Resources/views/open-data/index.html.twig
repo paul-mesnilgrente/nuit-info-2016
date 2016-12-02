@@ -8,17 +8,16 @@
 <h1>Visualisez l’OpenData au clair de lune</h1>
 
 <h2>L'immigration en général</h2>
-<div id="container" uri="{{ asset('data/france.csv') }}" style="min-width: 310px; height: 400px; margin: 0 auto; border: 4px solid #796AD5;"></div>
+<div id="container" uri="{{ asset('data/france.csv') }}" style="height: 400px; margin: 0 auto; border: 4px solid #796AD5;"></div>
 <h2>En résumé</h2>
 
 {% for article in liste %}
-	<div class="col-md-4 article">
+	<div class="col-md-12 article">
 		<h3><a href="{{ article.page }}">{{ article.title }}</a></h3>
 	</div>
 {% endfor %}
 <div class="col-md-12">
 <p>{{ desc }}</p>
-<p>Rédigé le {{ date }}</p>
 </div>
 
 <div id="map" uri="{{ asset('data/europe.json') }}"></div>
