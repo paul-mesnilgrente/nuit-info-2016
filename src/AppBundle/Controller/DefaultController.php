@@ -46,13 +46,4 @@ class DefaultController extends Controller
         // replace this example code with whatever you need
         return $this->render('default/contact.html.twig');
     }
-
-    /**
-     * @Route("/defi/jarvis", name="projetJarvis")
-     */
-    public function projetJarvisAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('default/projetJarvis.html.twig');
-    }
 }
