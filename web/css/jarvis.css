@@ -1,14 +1,3 @@
-
-.googleMaps{
-    float: right;
-    margin-bottom: 1em;
-    padding: 0;
-    /* Shadow */
-    -webkit-box-shadow: 2px 6px 13px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 6px 13px 0px rgba(0,0,0,0.75);
-    box-shadow: 2px 6px 13px 0px rgba(0,0,0,0.75);
-}
-
 .formation{
     overflow: hidden;
     margin-bottom: 1em;
@@ -59,16 +48,4 @@
     background-color: transparent;
     font-size: 21pt;
     color: #333;
-}
-
-/* ============================================================== */
-/* ======================== MEDIA QUERIES ======================= */
-/* ============================================================== */
-
-@media screen and (max-width: 991px){
-    .googleMaps {
-        /*float: none;*/
-        margin-left: 0;
-        margin-bottom: 1.5em;
-    }
 }
