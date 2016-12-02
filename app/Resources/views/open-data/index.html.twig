@@ -3,5 +3,12 @@
 {% block body %}
 <h1>Visualisez l’OpenData au clair de lune</h1>
 
+<div id="container" uri="{{ asset('data/france.csv')}}" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <p>En cours de construction</p>
+{% endblock %}
+
+{% block javascripts %}
+<script src="{{ asset('js/highcharts.js') }}"></script>
+<script src="{{ asset('js/data.js') }}"></script>
+<script src="{{ asset('js/demo.js') }}"></script>
 {% endblock %}
