@@ -17,28 +17,28 @@
       <ul class="nav navbar-nav">
         <li{% if r == 'homepage' %} class="active"{% endif %}><a href="{{ path('homepage') }}">Accueil</a></li>
         <li{% if r == 'equipe' %} class="active"{% endif %}><a href="{{ path('equipe') }}">Notre équipe</a></li>
-        <li{% if r == 'presentation' or r == 'utilisateur' or r == 'conception' or r == 'open_data' %} class="active"{% endif %} class="dropdown">
+        <li{% if r == 'doc_presentation_opendata' or r == 'doc_utilisateur_opendata' or r == 'doc_conception_opendata' or r == 'doc_open_data_opendata' %} class="active"{% endif %} class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Défi OpenData <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li{% if r == 'presentation' %} class="active"{% endif %}><a href="{{ path('presentation') }}">Présentation</a></li>
-            <li{% if r == 'utilisateur' %} class="active"{% endif %}><a href="{{ path('utilisateur') }}">Documentation utilisateur</a></li>
-            <li{% if r == 'conception' %} class="active"{% endif %}><a href="{{ path('conception') }}">Conception</a></li>
+            <li{% if r == 'doc_presentation_opendata' %} class="active"{% endif %}><a href="{{ path('doc_presentation_opendata') }}">Présentation</a></li>
+            <li{% if r == 'doc_utilisateur_opendata' %} class="active"{% endif %}><a href="{{ path('doc_utilisateur_opendata') }}">Documentation utilisateur</a></li>
+            <li{% if r == 'doc_conception_opendata' %} class="active"{% endif %}><a href="{{ path('doc_conception_opendata') }}">Conception</a></li>
             <li role="separator" class="divider"></li>
             <li{% if r == 'open_data' %} class="active"{% endif %}><a href="{{ path('open_data') }}">Démonstration</a></li>
           </ul>
         </li>
-        <li{% if r == 'presentation' or r == 'utilisateur' or r == 'conception' or r == 'jarvis' %} class="active"{% endif %} class="dropdown">
+        <li{% if r == 'doc_presentation_jarvis' or r == 'doc_utilisateur_jarvis' or r == 'doc_conception_jarvis' or r == 'jarvis' %} class="active"{% endif %} class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Défis Jarvis <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li{% if r == 'presentation' %} class="active"{% endif %}><a href="{{ path('presentation') }}">Présentation</a></li>
-            <li{% if r == 'utilisateur' %} class="active"{% endif %}><a href="{{ path('utilisateur') }}">Documentation utilisateur</a></li>
-            <li{% if r == 'conception' %} class="active"{% endif %}><a href="{{ path('conception') }}">Conception</a></li>
+            <li{% if r == 'doc_presentation_jarvis' %} class="active"{% endif %}><a href="{{ path('doc_presentation_jarvis') }}">Présentation</a></li>
+            <li{% if r == 'doc_utilisateur_jarvis' %} class="active"{% endif %}><a href="{{ path('doc_utilisateur_jarvis') }}">Documentation utilisateur</a></li>
+            <li{% if r == 'doc_conception_jarvis' %} class="active"{% endif %}><a href="{{ path('doc_conception_jarvis') }}">Conception</a></li>
             <li role="separator" class="divider"></li>
-            <li{% if r == 'open_data' %} class="active"{% endif %}><a href="{{ path('jarvis') }}">Démonstration</a></li>
+            <li{% if r == 'jarvis' %} class="active"{% endif %}><a href="{{ path('jarvis') }}">Démonstration</a></li>
           </ul>
         </li>
       </ul>
