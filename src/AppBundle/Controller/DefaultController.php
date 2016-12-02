@@ -48,7 +48,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/projetJarvis", name="projetJarvis")
+     * @Route("/defi/jarvis", name="projetJarvis")
      */
     public function projetJarvisAction(Request $request)
     {
