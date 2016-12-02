@@ -29,16 +29,16 @@
             <li{% if r == 'open_data' %} class="active"{% endif %}><a href="{{ path('open_data') }}">Démonstration</a></li>
           </ul>
         </li>
-        <li{% if r == 'presentation' or r == 'utilisateur' or r == 'conception' or r == 'jarvis' %} class="active"{% endif %} class="dropdown">
+        <li{% if r == 'doc_presentation_jarvis' or r == 'doc_utilisateur_jarvis' or r == 'doc_conception_jarvis' or r == 'jarvis' %} class="active"{% endif %} class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             Défis Jarvis <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li{% if r == 'presentation' %} class="active"{% endif %}><a href="{{ path('presentation') }}">Présentation</a></li>
-            <li{% if r == 'utilisateur' %} class="active"{% endif %}><a href="{{ path('utilisateur') }}">Documentation utilisateur</a></li>
-            <li{% if r == 'conception' %} class="active"{% endif %}><a href="{{ path('conception') }}">Conception</a></li>
+            <li{% if r == 'doc_presentation_jarvis' %} class="active"{% endif %}><a href="{{ path('doc_presentation_jarvis') }}">Présentation</a></li>
+            <li{% if r == 'doc_utilisateur_jarvis' %} class="active"{% endif %}><a href="{{ path('doc_utilisateur_jarvis') }}">Documentation utilisateur</a></li>
+            <li{% if r == 'doc_conception_jarvis' %} class="active"{% endif %}><a href="{{ path('doc_conception_jarvis') }}">Conception</a></li>
             <li role="separator" class="divider"></li>
-            <li{% if r == 'open_data' %} class="active"{% endif %}><a href="{{ path('jarvis') }}">Démonstration</a></li>
+            <li{% if r == 'jarvis' %} class="active"{% endif %}><a href="{{ path('jarvis') }}">Démonstration</a></li>
           </ul>
         </li>
       </ul>
