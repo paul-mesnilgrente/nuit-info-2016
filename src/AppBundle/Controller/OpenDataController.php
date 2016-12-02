@@ -17,6 +17,20 @@ class OpenDataController extends Controller
     public function projetAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('open-data/index.html.twig');
+        $data = file_get_contents("https://www.data.gouv.fr/api/1/reuses/immigration/");
+		$json = json_decode($data);
+		$liste = $json->{'datasets'};
+		$desc = $json->{'description'};
+		$date = $json->{'created_at'};
+
+		/*foreach($liste as $article){
+			$title = $article->{"title"};
+			$uri = $article->{"page"};
+			echo "<a href='$uri'>$title</a>";
+		}*/
+        return $this->render('open-data/index.html.twig', array(
+        	'liste' => $liste,
+        	'desc' => $desc,
+        	'date' => $date,));
     }
 }

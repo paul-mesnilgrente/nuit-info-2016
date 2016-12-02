@@ -5,6 +5,10 @@
     src: local('Eras Light ITC'), url('../font-awesome/fonts/ERASLGHT.woff') format('woff');
 }
 
+h2,h3{
+    text-align: center;
+}
+
 .navbar-inverse, footer{
     background-color: #222;
 }
