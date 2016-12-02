@@ -7,7 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * @Route("/jarvis/doc")
+ * @Route("/defi/jarvis/doc")
  */
 class DocJarvisController extends Controller
 {

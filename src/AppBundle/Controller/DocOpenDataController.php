@@ -7,34 +7,34 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
- * @Route("/doc")
+ * @Route("/defi/open-data/doc")
  */
-class DocController extends Controller
+class DocOpenDataController extends Controller
 {
     /**
-     * @Route("/presentation", name="presentation")
+     * @Route("/presentation", name="doc_presentation_opendata")
      */
     public function presentationAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('doc/presentation.html.twig');
+        return $this->render('open-data/doc/presentation.html.twig');
     }
 
     /**
-     * @Route("/utilisateur", name="utilisateur")
+     * @Route("/utilisateur", name="doc_utilisateur_opendata")
      */
     public function utilisateurAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('doc/utilisateur.html.twig');
+        return $this->render('open-data/doc/utilisateur.html.twig');
     }
 
     /**
-     * @Route("/conception", name="conception")
+     * @Route("/conception", name="doc_conception_opendata")
      */
     public function conceptionAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('doc/conception.html.twig');
+        return $this->render('open-data/doc/conception.html.twig');
     }
 }
