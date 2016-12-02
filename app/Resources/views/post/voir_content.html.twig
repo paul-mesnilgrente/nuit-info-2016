@@ -1,5 +1,5 @@
 <article>
-  <h2>{{ post.titre }}</h2>
+  <h2><a href="{{ path('voir_post', {'slug': post.slug}) }}">{{ post.titre }}</a></h2>
   <p>
     <small>{{ post.auteur.username }} | 
       {{ post.datePublication is empty ?
