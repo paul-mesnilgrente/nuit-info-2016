@@ -86,6 +86,8 @@ body {
 }
 .panel-heading h2 {
     text-align: left;
+    font-size: 17px;
+    margin: 0px;
 }
 
 /**********************************************************/
