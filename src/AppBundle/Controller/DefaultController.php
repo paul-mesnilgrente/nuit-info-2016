@@ -23,6 +23,8 @@ class DefaultController extends Controller
         foreach ($posts as $post) {
             $html = $parser->transformMarkdown($post->getContenu());
             $post->setContenu($html);
+            $html = $parser->transformMarkdown($post->getAbstract());
+            $post->setAbstract($html);
         }
 
         return $this->render('default/index.html.twig',

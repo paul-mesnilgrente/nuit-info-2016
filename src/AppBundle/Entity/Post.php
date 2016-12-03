@@ -71,6 +71,13 @@ class Post implements RoutedItemInterface
     /**
      * @var string
      *
+     * @ORM\Column(name="abstract", type="text")
+     */
+    private $abstract;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="contenu", type="text")
      */
     private $contenu;
@@ -284,4 +291,28 @@ class Post implements RoutedItemInterface
         return "";
     }
 
+
+    /**
+     * Set abstract
+     *
+     * @param string $abstract
+     *
+     * @return Post
+     */
+    public function setAbstract($abstract)
+    {
+        $this->abstract = $abstract;
+
+        return $this;
+    }
+
+    /**
+     * Get abstract
+     *
+     * @return string
+     */
+    public function getAbstract()
+    {
+        return $this->abstract;
+    }
 }

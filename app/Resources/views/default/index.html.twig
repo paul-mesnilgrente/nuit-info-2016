@@ -1,12 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="panel panel-primary">
+        <div class="panel-heading">La ligue des informations extraordinaires</div>
+        <div class="panel-body">
+          Nous représentons l'UPSSITECH à la nuit de l'info 2016. Vous pouvez voir notre équipe
+          <a href="{{ path('equipe') }}">ici</a>.<br/>
+          Nous nous appelons la <strong>Ligue des Informations Extraordinaires</strong>
+          (<abbr title="Ligue des Informations Extraordinaires">LIE</abbr>).<br/>
+          Attention à nous pendant cette nuit, nous sommes <strong>organisés et préparés</strong> !
+        </div>
+      </div>
+    </div>
+  </div>
+  <h1>Notre blog</h1>
 {% if posts is empty %}
 <p>Aucun article</p>
 {% else %}
-  {% for post in posts %}
-    {% include 'post/voir_content.html.twig' %}
-    {% if not loop.last %}<hr>{% endif %}
-  {% endfor %}
+  <div class="row">
+    {% for post in posts %}
+      <div class="col-md-4">
+        <div class="panel panel-primary">
+          <div class="panel-heading"><h2><a href="{{ path('voir_post', {'slug': post.slug}) }}">{{ post.titre }}</a></h2></div>
+          <div class="panel-body">
+            {{ post.abstract|raw }}
+          </div>
+          <div class="panel-footer text-right">
+            {% if is_granted('ROLE_AUTEUR') %}
+              <a class="btn btn-primary" href="{{ path('modifier_post', {'slug': post.slug}) }}">Modifier</a>
+              <a class="btn btn-danger" href="{{ path('supprimer_post', {'slug': post.slug}) }}">Supprimer</a>
+            {% endif %}
+            {{ post.datePublication is empty ? "" : post.datePublication|date('d/m/Y à H\\hi') }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 {% endif %}
 {% endblock %}

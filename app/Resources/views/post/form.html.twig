@@ -13,6 +13,7 @@
       {{ form_start(form) }}
         {{ form_row(form.titre) }}
         {{ form_row(form.estPublie) }}
+        {{ form_row(form.abstract, {'attr': {'rows': 7}}) }}
         {{ form_row(form.contenu, {'attr': {'rows': 30}}) }}
         <input type="submit" class="btn btn-default">
       {{ form_end(form) }}

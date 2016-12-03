@@ -16,6 +16,7 @@ class PostType extends AbstractType
         $builder
             ->add('titre')
             ->add('estPublie')
+            ->add('abstract')
             ->add('contenu');
     }
     

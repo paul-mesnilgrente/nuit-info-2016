@@ -78,6 +78,17 @@ body {
 }
 
 /**********************************************************/
+/*                    LES APERCUS des posts               */
+/**********************************************************/
+
+.panel-heading a {
+    color: white;
+    text-decoration: none;
+}
+.panel-heading h2 {
+    text-align: left;
+}
+/**********************************************************/
 /*                    HEADER DE PAGE                      */
 /**********************************************************/
 
@@ -161,7 +172,7 @@ footer .images img{
     margin-bottom: 1em;
 }
 
-footer a{
+footer a {
     color: white;
 }
 
