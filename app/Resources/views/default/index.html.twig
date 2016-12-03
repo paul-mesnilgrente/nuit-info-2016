@@ -19,8 +19,8 @@
 {% if posts is empty %}
 <p>Aucun article</p>
 {% else %}
-  <div class="row">
-    {% for post in posts %}
+  {% for post in posts %}
+  {% if (loop.index0 % 3) == 0 %}<div class="row">{% endif %}
       <div class="col-md-4">
         <div class="panel panel-primary">
           <div class="panel-heading"><h2><a href="{{ path('voir_post', {'slug': post.slug}) }}">{{ post.titre }}</a></h2></div>
@@ -36,7 +36,7 @@
           </div>
         </div>
       </div>
-    {% endfor %}
-  </div>
+  {% if (loop.index % 3) == 0 %}</div>{% endif %}
+  {% endfor %}
 {% endif %}
 {% endblock %}
